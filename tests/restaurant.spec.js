@@ -67,15 +67,7 @@ describe('10 - Implemente os casos de teste e a função `createMenu`', () => {
     objetoRetornado.order("pepsi");
     expect(objetoRetornado.consumption).toEqual(expect.arrayContaining(['coxinha','espetinho','pepsi']))
     objetoRetornado.order("pepsi");
-    function count (element){
-      let counter = 0;
-      if(element === 'pepsi'){
-        counter += 1;
-      }
-      return counter;
-    }
-    let test = objetoRetornado.consumption.forEach(count);
-    expect(test).toBe(2)
+    expect(objetoRetornado.consumption).toEqual(expect.arrayContaining(['pepsi','pepsi']))
   })
     // TESTE 1: Verifique se o retorno da função createMenu() é um objeto que possui a
     // chave fetchMenu, a qual tem como valor uma função.
