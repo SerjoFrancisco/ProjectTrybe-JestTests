@@ -83,6 +83,7 @@ const myOrder = (str) => {
   arr.push(str);
   return arr;
 };
+
 function sumCheck(numbersArray) {
   let check = 0;
  for (let i = 0; i < numbersArray.length; i += 1) {
@@ -95,16 +96,17 @@ const createMenu = (obj) => ({
   consumption: arr,
   order: myOrder,
   pay: () => {
-    let total = [];
-    const menu = `${Object.entries(obj.food)},${Object.entries(obj.drink)}`;
-    const array = menu.split(',');
-    for (let i = 0; i < array.length; i += 1) {
-      for (let j = 0; j < arr.length; j += 1) {
-        if (arr[j] === array[i]) {
-          total.push(array[i + 1]);
+    const cardapio = `${Object.entries(obj.food)},${Object.entries(obj.drink)}`;
+    const array = cardapio.split(',');
+    const total = [];
+    array.forEach((element, index, arra) => {
+      for (let i = 0; i < arr.length; i += 1) {
+        if (arr[i] === element) {
+          total.push(array[index + 1]);
         }
       }
-    }
+      return total;
+    });
     return sumCheck(total);
   }, 
 });
