@@ -99,7 +99,7 @@ const createMenu = (obj) => ({
     const cardapio = `${Object.entries(obj.food)},${Object.entries(obj.drink)}`;
     const array = cardapio.split(',');
     const total = [];
-    array.forEach((element, index, arra) => {
+    array.forEach((element, index) => {
       for (let i = 0; i < arr.length; i += 1) {
         if (arr[i] === element) {
           total.push(array[index + 1]);
