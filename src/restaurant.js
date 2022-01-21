@@ -83,12 +83,30 @@ const myOrder = (str) => {
   arr.push(str);
   return arr;
 };
-
+function sumCheck(numbersArray) {
+  let check = 0;
+ for (let i = 0; i < numbersArray.length; i += 1) {
+   check += parseInt(numbersArray[i], 10);
+ }
+ return check + (check / 10);
+}
 const createMenu = (obj) => ({
-    fetchMenu: () => obj,
-    consumption: arr,
-    order: myOrder,
- 
+  fetchMenu: () => obj,
+  consumption: arr,
+  order: myOrder,
+  pay: () => {
+    let total = [];
+    const menu = `${Object.entries(obj.food)},${Object.entries(obj.drink)}`;
+    const array = menu.split(',');
+    for (let i = 0; i < array.length; i += 1) {
+      for (let j = 0; j < arr.length; j += 1) {
+        if (arr[j] === array[i]) {
+          total.push(array[i + 1]);
+        }
+      }
+    }
+    return sumCheck(total);
+  }, 
 });
 
 module.exports = createMenu;
