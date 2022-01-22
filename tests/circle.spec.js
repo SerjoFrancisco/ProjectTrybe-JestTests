@@ -33,9 +33,14 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     expect(circle(3).area).toBeCloseTo(28.26)
   })
     it('Verifica se retorna o objeto correto', () =>{
-      expect(circle(3).circumference).toBeCloseTo(18.84);
-      expect(circle(3).area).toBeCloseTo(28.26);
-      expect(circle(3).radius).toBeCloseTo(3);
+      const test = circle(3);
+      const tester = {
+        radius: parseFloat(test.radius.toPrecision(4)),
+        area: parseFloat(test.area.toPrecision(4)),
+        circumference: parseFloat(test.circumference.toPrecision(4)),
+      };
+      const expected = { radius: 3, area: 28.26, circumference: 18.84 };
+      expect(tester).toMatchObject(expected);
     })
   
   // ESCREVA SEUS TESTES ABAIXO:
