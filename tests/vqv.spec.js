@@ -16,7 +16,7 @@ const vqv = require('../src/vqv.js');
 
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
-
+// Teste Feito Pela Trybe
 describe('3 - Implemente a função `vqv`', () => {
   it('Verifica se `vqv` é uma função', () => {
     expect(typeof vqv).toBe('function');

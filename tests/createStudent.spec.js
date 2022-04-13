@@ -20,7 +20,7 @@ const createStudent = require('../src/createStudent');
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 const goodPerson = 'Eita pessoa boa!';
-
+// Teste Criado Pela Trybe
 describe('5 - Implemente a função `createStudent`', () => {
   it('Verifica se a função `createStudent` retorna o objeto esperado', () => {
     const estudante = createStudent('Leandrão, o Lobo Solitário');

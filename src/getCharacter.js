@@ -35,7 +35,7 @@ Retorno:
   phrases: [ 'Not today', 'A girl has no name.' ]
 }
 */
-
+// Função feita pela Trybe
 const characters = {
   arya: {
     name: 'Arya Stark',

@@ -34,7 +34,7 @@ const { calculator, arrayGenerator } = require('../src/objPlayground');
   arrayGenerator('values', { sum: 3, mult: 2, div: 1, sub: 0 }) // [ 3, 2, 1, 0 ]
   arrayGenerator('entries', { sum: 3, mult: 2, div: 1, sub: 0 }) // [ [ 'sum', 3 ], [ 'mult', 2 ], [ 'div', 1 ], [ 'sub', 0 ] ]
 */
-
+// Teste Feito Pela Trybe.
 describe('7 - Implemente as funções `calculator` e `arrayGenerator`', () => {
   it('Verifica se a função `calculator` retorna os valores esperados', () => {
     expect(calculator(1, 3)).toEqual({ sum: 4, mult: 3, div: 0, sub: -2 });

@@ -23,7 +23,7 @@
     }
   ]
 */
-
+// Função feita pela Trybe
 const productDetails = (firstProduct, secondProduct) => [
   {
     name: firstProduct,

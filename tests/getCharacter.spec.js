@@ -40,7 +40,7 @@ Retorno:
   phrases: [ 'Not today', 'A girl has no name.' ]
 }
 */
-
+// Teste Criado pela Trybe
 describe('9 - Implemente os casos de teste da função `getCharacter`', () => {
   it('Verifica se a função `getCharacter` retorna o objeto do personagem corretamente.', () => {
   });
